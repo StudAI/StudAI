@@ -1,0 +1,29 @@
+h1 {
+  color: #091133;
+  font-size: 50px;
+  line-height: 66px;
+}
+h2 {
+  color: #091133;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+p {
+  color: #505f98;
+}
+
+button {
+  width: 200px;
+  padding: 5px 0;
+  font-size: 16px;
+  border-radius: 2px;
+  font-weight: 500;
+  &:hover {
+    background-color: none;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
