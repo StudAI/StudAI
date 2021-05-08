@@ -1,23 +1,18 @@
 {
-    "manifest_version": 2,
-  
-    "name": "StudAI",
-    "description": "Supercharge your learning with the power of AI.",
-    "version": "0.1.0",
-    "options_page": "options.html",
-    
-    "background": {
-      "scripts": ["background.js", "toggling.js"],
-      "persistent": false
-    },
-    "icons": { "16": "icon.png"},
-    "browser_action": {
-      "default_icon": "icon.png"
-    },
-    "permissions": [
-      "storage",
-      "tabs",
-      "contextMenus"
-     ]
-  }
-  
+  "manifest_version": 2,
+
+  "name": "StudAI",
+  "description": "Supercharge your learning with the power of AI.",
+  "version": "0.1.0",
+  "options_page": "options.html",
+
+  "background": {
+    "scripts": ["background.js", "toggling.js"],
+    "persistent": false
+  },
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": ["storage", "tabs", "contextMenus"]
+}
