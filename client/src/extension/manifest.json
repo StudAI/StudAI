@@ -2,10 +2,5 @@
     "name": "StudAI",
     "description": "my ext",
     "version": "0.1.0",
-    "manifest_version": 2,
-    "icons":{},
-    "background": {
-        "scripts":"none"
-    },
-    "options_page": ""
+    "manifest_version": 2
 }
