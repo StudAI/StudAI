@@ -41,7 +41,7 @@ chrome.runtime.onStartup.addListener(function() {
 		else if(!data.isEnabled){
 			icon = 'off.png';
 		}else{
-			icon = 'icon.png';
+			icon = 'Logo16.svg';
 		}
 		chrome.browserAction.setIcon({path:{"16": icon}});
 	});
