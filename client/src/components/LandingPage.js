@@ -33,7 +33,7 @@ function LandingPage() {
       <div className="landingpage_find">
         <div className="landingpage_find_content">
           <h2 className="landingpage_find_content_header">
-            Find the Perfect Study Group!
+            Find the Perfect Study Group
           </h2>
           <p className="landingpage_find_content_text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
