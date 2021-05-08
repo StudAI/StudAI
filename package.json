@@ -1,0 +1,26 @@
+{
+  "name": "studai",
+  "version": "1.0.0",
+  "description": "Everything else in our lives is AI powered and yet when it comes to our learning practices (arguably the most important aspect of our young lives) we seem to be stuck in the 18th Century! StudAI brings stuying to the modern era with Study partener matching, tutoring services and a revolutionary ML Study tracker, all to help you study smarter and not harder.  StudAI. Give it a try!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChinemeremChigbo/StudAI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChinemeremChigbo/StudAI/issues"
+  },
+  "homepage": "https://github.com/ChinemeremChigbo/StudAI#readme",
+  "dependencies": {
+    "dotenv": "^9.0.0",
+    "express": "^4.17.1",
+    "fs": "*",
+    "pg": "^8.6.0"
+  }
+}
