@@ -1,6 +1,6 @@
 function turnFilteringOff(){
 	chrome.storage.sync.set({'isEnabled': false}, function() {
-		chrome.browserAction.setIcon({path:{"16": 'off.png'}});
+		chrome.browserAction.setIcon({path:{"16": '/assets/off.png'}});
 		console.log('Filtering disabled');
 	});
 }
