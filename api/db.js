@@ -30,7 +30,7 @@ async function createUser(user) {
   }
 }
 
-async function userAlreadyExists(email) {
+async function findUser(email) {
   const values = [email];
   const text = "SELECT * FROM users WHERE email = $1";
   try {
@@ -43,4 +43,4 @@ async function userAlreadyExists(email) {
 }
 
 exports.createUser = createUser;
-exports.userAlreadyExists = userAlreadyExists;
+exports.findUser = findUser;
