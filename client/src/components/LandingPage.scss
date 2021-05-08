@@ -1,0 +1,85 @@
+.landingpage {
+  //   background-image: url("./background-img.svg");
+  //   background-size: 100vw auto;
+  //   background-repeat: no-repeat;
+  height: 100vh;
+  &_content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 10vw;
+    &_info {
+      &_header {
+        line-height: 66px;
+        font-size: 50px;
+        font-weight: 500;
+      }
+      &_text {
+        font-weight: 400;
+      }
+      &_actionarea {
+        &_signup {
+          background-color: #111b47;
+          color: #ffffff;
+          margin-right: 20px;
+        }
+        &_login {
+          background-color: transparent;
+          border: 2px solid #091133;
+        }
+      }
+    }
+    &_img {
+      width: 60vw;
+    }
+  }
+  &_find {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10vw;
+    &_content {
+      margin-right: 2vw;
+    }
+    &_img {
+      width: 40vw;
+    }
+  }
+  &_tutor {
+    display: flex;
+    align-items: center;
+    padding: 0 10vw;
+    height: 100vh;
+    &_content {
+    }
+    &_img {
+      width: 40vw;
+      margin-right: 2vw;
+    }
+  }
+  &_super {
+    background-image: url("./background.svg");
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 100vh;
+    padding:100px;
+
+    &_content {
+      width: 30vw;
+      margin: auto;
+      margin-bottom: 100px;
+      &_header {
+      }
+      &_text {
+      }
+      &_download {
+        background-color: #111b47;
+        color: #ffffff;
+        margin-right: 20px;
+      }
+    }
+    &_img {
+    }
+  }
+}
