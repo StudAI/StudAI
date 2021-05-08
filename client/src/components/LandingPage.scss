@@ -2,6 +2,7 @@
   //   background-image: url("./background-img.svg");
   //   background-size: 100vw auto;
   //   background-repeat: no-repeat;
+  background-color: rgb(245, 235, 220);
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
@@ -59,8 +60,8 @@
     scroll-snap-align: center;
     display: flex;
     align-items: center;
-    padding: 0 10vw;
-    height: 100vh;
+    padding: 0vh 10vw 5vh;
+    height: 115vh;
     &_content {
     }
     &_img {
@@ -74,26 +75,27 @@
     background-repeat: no-repeat;
     text-align: center;
     height: 100vh;
-    padding:100px;
-    scroll-snap-align: center;
+
 
     &_content {
       width: 30vw;
       margin: auto;
-      margin-bottom: 20px;
-      padding-left: 2vw;
+
+
       &_header {
       }
       &_text {
       }
       &_download {
         background-color: #111b47;
-        color: #ffffff;
+        color: #ffffff; 
+        margin-top: 8vh;
+        margin-bottom: 5vh;
+        scroll-snap-align: center;
 
       }
     }
     &_img {
-      padding-right: 1vw;
     }
   }
 }
