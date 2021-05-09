@@ -18,19 +18,11 @@ const config = {
 const pool = new Pool(config);
 
 async function createUser(user) {
-  const values = [
-    user.name,
-    user.email,
-    user.password,
-    user.bio,
-    user.timeZone,
-    user.isStudent,
-    user.isMentor,
-    user.studyStartTime,
-    user.studyEndTime,
-  ];
-  const text = `INSERT INTO users(name, email, password, bio, timezone, is_student, is_mentor, study_start_time, study_end_time) 
-    VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *`;
+  const values = Object.values(user);
+  const text = `INSERT INTO users(name, email, password, is_student, math, science, 
+    english, engineering, grade_level, extraversion, agreeableness,conscientiousness,
+    neuroticism, openness) 
+    VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING *`;
   try {
     const res = await pool.query(text, values);
     return res.rows[0];
@@ -51,21 +43,11 @@ async function findUser(email) {
 }
 
 async function updateUser(email, user) {
-  const values = [
-    user.name,
-    user.email,
-    user.password,
-    user.bio,
-    user.timeZone,
-    user.isStudent,
-    user.isMentor,
-    user.studyStartTime,
-    user.studyEndTime,
-    email,
-  ];
-  const text = `UPDATE users SET name = $1, email = $2, password = $3, bio = $4, 
-    timezone = $5, is_student = $6, is_mentor = $7, study_start_time = $8, study_end_time = $9
-    WHERE email = $10 RETURNING *`;
+  const values = [...Object.values(user), email];
+  const text = `UPDATE users SET name = $1, email = $2, password = $3, is_student = $4, math = $5, 
+    science = $6, english = $7, engineering = $8, grade_level = $9, extraversion = $10,
+    agreeableness = $11, conscientiousness = $12, neuroticism = $13, openness = $14
+    WHERE email = $15 RETURNING *`;
   try {
     const res = await pool.query(text, values);
     return res.rows[0];
