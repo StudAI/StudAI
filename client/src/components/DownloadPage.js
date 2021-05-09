@@ -10,7 +10,7 @@ function DownloadPage() {
      
     }}>
       <div className="download_item"             style={{
-              paddingTop: "50vh",
+              paddingTop: "48vh",
               overflow: "hidden"
              
             }}>
@@ -22,7 +22,7 @@ function DownloadPage() {
               background: "#111B47",
               textTransform: "capitalize",
               marginLeft: "7vw",
-              marginRight: "8vw",
+              marginRight: "9vw",
               width:"175px"
             }}
             onClick={() => history.push("/download")}
@@ -36,7 +36,7 @@ function DownloadPage() {
               color: "white",
               background: "#111B47",
               textTransform: "capitalize",
-              marginLeft: "9vw",
+              marginLeft: "8vw",
               marginRight: "7vw",
               width:"175px"
             }}
@@ -51,8 +51,8 @@ function DownloadPage() {
               color: "white",
               background: "#111B47",
               textTransform: "capitalize",
-              marginLeft: "9vw",
-              marginRight: "7vw",
+              marginLeft: "7vw",
+              marginRight: "6vw",
               width:"175x"
             }}
             onClick={() => history.push("/download")}

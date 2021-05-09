@@ -1,11 +1,6 @@
 import React from "react";
-<<<<<<< Updated upstream
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-=======
-import {Button } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
->>>>>>> Stashed changes
 import "./LandingPage.scss";
 
 function LandingPage() {
@@ -149,13 +144,9 @@ function LandingPage() {
               <a href="#contact">Contact</a>
             </div>
             <div className="landingpage_footer_logo">
-<<<<<<< Updated upstream
               <a href="/">
                 <img alt="logo" src="assets/logo.svg" />
               </a>
-=======
-              <img src="assets/logo.svg" />
->>>>>>> Stashed changes
             </div>
           </div>
         </div>
