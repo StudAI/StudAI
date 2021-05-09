@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { Pool } = require("pg");
 require("dotenv").config();
-const sampleUsers = require("./sampleUsers.json");
+const sampleUsers = require("./sampleUsers.json").users;
 
 // Configure the database connection.
 const config = {
@@ -24,9 +24,9 @@ function uploadUsers() {
 
 async function uploadUser(user) {
   const values = Object.values(user);
-  const text = `INSERT INTO users(name, email, is_student, math, science, english, engineering, 
+  const text = `INSERT INTO users(is_student, user_id, name, email, password, math, science, english, engineering, 
     grade_level, extraversion, agreeableness, conscientiousness, neuroticism, openness) 
-    VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)`;
+    VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)`;
   try {
     await pool.query(text, values);
   } catch (err) {
