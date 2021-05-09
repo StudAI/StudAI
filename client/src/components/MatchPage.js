@@ -22,6 +22,7 @@ import PersonalityQuestions from "./PersonalityQuestions.json";
 
 function MatchPage() {
   const [activeStep, setActiveStep] = useState(0);
+  const [connection, setConnection] = useState("false");
   const [data, setData] = useState({
     math: 1,
     science: 1,
@@ -47,6 +48,12 @@ function MatchPage() {
     let newArr = [...questionData];
     newArr[Number(e.target.name)].value = Number(e.target.value);
     setQuestionData(newArr);
+  };
+  const handleConnectionClick = () => {
+    if (connection === "false") {
+      setConnection("loading");
+      setTimeout(() => setConnection("true"), 2000);
+    }
   };
   async function handleSubmit() {
     console.log(data);
@@ -282,10 +289,10 @@ function MatchPage() {
                       opacity: 0.7,
                     }}
                   />
-                  <Typography variant="h6">
+                  <Typography variant="h6" style={{ fontStyle: "italic" }}>
                     {match.email.toLowerCase()}
                   </Typography>
-                  <Typography variant="h6">
+                  <Typography variant="subtitle1">
                     {matchType === "tutor"
                       ? "Tutor"
                       : match.grade_level === 1
@@ -304,6 +311,29 @@ function MatchPage() {
                       <Chip variant="outlined" label="engineering" />
                     )}
                   </div>
+                  <Button
+                    style={{ background: "green", margin: 10 }}
+                    variant="contained"
+                    onClick={handleConnectionClick}
+                  >
+                    {connection === "false" ? (
+                      "Connect"
+                    ) : connection === "loading" ? (
+                      <>
+                        Connecting{" "}
+                        <CircularProgress
+                          style={{
+                            marginLeft: 5,
+                            color: "#000",
+                            width: 16,
+                            height: 16,
+                          }}
+                        />
+                      </>
+                    ) : (
+                      "Connected"
+                    )}
+                  </Button>
                 </Paper>
               </>
             ) : (
