@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LandingPage.scss";
 
 function LandingPage() {
@@ -19,10 +20,20 @@ function LandingPage() {
           </p>
           <div className="landingpage_content_info_actionarea">
             <button className="landingpage_content_info_actionarea_signup">
-              Sign Up
+              <Link
+                to="/signup"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                Sign Up
+              </Link>
             </button>
             <button className="landingpage_content_info_actionarea_login">
-              Log In
+              <Link
+                to="/login"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                Log In
+              </Link>
             </button>
           </div>
         </div>
