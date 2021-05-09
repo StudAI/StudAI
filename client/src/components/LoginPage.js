@@ -14,20 +14,21 @@ import { useDispatch } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: "23vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "#111B47",
   },
   form: {
     width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
   submit: {
+    backgroundColor: "#111B47",
     margin: theme.spacing(3, 0, 2),
   },
 }));
@@ -71,13 +72,13 @@ export default function LoginPage() {
     >
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
+          <LockOutlinedIcon backgroundColor= "primary" />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography style={{fontWeight: "bold"}} component="h1" variant="h5">
           Log in
         </Typography>
-        <form className={classes.form} noValidate>
-          <TextField
+        <form className={classes.form} noValidate >
+          <TextField 
             variant="outlined"
             margin="normal"
             required
@@ -87,6 +88,8 @@ export default function LoginPage() {
             onChange={handleChange}
             label="Email Address"
             name="email"
+            size="small"
+            autoComplete="email"
             autoFocus
           />
           <TextField
@@ -96,6 +99,7 @@ export default function LoginPage() {
             onChange={handleChange}
             required
             fullWidth
+            size="small"
             name="password"
             label="Password"
             type="password"
@@ -111,10 +115,13 @@ export default function LoginPage() {
             Log In
           </Button>
           <Grid justify="center" container>
-            <Grid item>
-              <Link onClick={() => history.push("/signup")}>
-                {"Don't have an account? Sign Up"}
+          <Grid item>
+            <h5>
+                Don't have an account? 
+              <Link style={{color: "#37447e", marginLeft: "5px", fontWeight: "bold"}} href="/signup" variant="body2">
+                Sign up
               </Link>
+              </h5>
             </Grid>
           </Grid>
         </form>

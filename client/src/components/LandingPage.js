@@ -120,7 +120,7 @@ function LandingPage() {
         <div className="landingpage_footer_container">
           <div className="landingpage_footer_link-container">
             <div className="landingpage_footer_copyright">
-              ©2020 Yourcompany
+              ©2021 StudAI Inc
             </div>
             <div className="landingpage_footer_link">
               <a href="#about">About</a>

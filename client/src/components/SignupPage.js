@@ -13,20 +13,21 @@ import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: "20vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "#111B47",
   },
   form: {
     width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(3),
   },
   submit: {
+    backgroundColor: "#111B47",
     margin: theme.spacing(3, 0, 2),
   },
 }));
@@ -73,7 +74,7 @@ export default function SignupPage() {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography style={{fontWeight: "bold"}} component="h1" variant="h5">
           Sign up
         </Typography>
         <form className={classes.form} noValidate>
@@ -85,6 +86,7 @@ export default function SignupPage() {
                 value={userInfo.name}
                 onChange={handleChange}
                 variant="outlined"
+                size="small"
                 required
                 fullWidth
                 id="name"
@@ -97,6 +99,7 @@ export default function SignupPage() {
                 variant="outlined"
                 required
                 fullWidth
+                size="small"
                 id="email"
                 value={userInfo.email}
                 onChange={handleChange}
@@ -112,6 +115,7 @@ export default function SignupPage() {
                 variant="outlined"
                 required
                 fullWidth
+                size="small"
                 name="password"
                 label="Password"
                 type="password"
@@ -131,9 +135,12 @@ export default function SignupPage() {
           </Button>
           <Grid justify="center" container>
             <Grid item>
-              <Link onClick={() => history.push("/login")} variant="body2">
-                Already have an account? Sign in
+            <h5>
+                Already have an account? 
+              <Link style={{color: "#37447e", marginLeft: "5px", fontWeight: "bold"}} href="/login" variant="body2">
+                Log in
               </Link>
+              </h5>
             </Grid>
           </Grid>
         </form>
