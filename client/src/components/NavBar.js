@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 function NavBar() {
   const history = useHistory();
-  const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+  const isLoggedIn = useSelector((state) => state.user.loggedIn);
   return (
     <div>
       <AppBar position="absolute" color="transparent" elevation={0}>
