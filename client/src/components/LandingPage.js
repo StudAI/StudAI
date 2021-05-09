@@ -53,7 +53,7 @@ function LandingPage() {
         </div>
         <div className="landingpage_tutor_content">
           <h2 className="landingpage_tutor_content_header">
-          ML- Powered Tutoring
+            ML- Powered Tutoring
           </h2>
           <p className="landingpage_tutor_content_text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -67,7 +67,7 @@ function LandingPage() {
       <div className="landingpage_super">
         <div className="landingpage_super_content">
           <h2 className="landingpage_super_content_header">
-          Become a Super-Student
+            Become a Super-Student
           </h2>
           <p className="landingpage_super_content_text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -76,10 +76,30 @@ function LandingPage() {
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             Nulla consequat massa quis enim.
           </p>
-          <button className="landingpage_super_content_download">Download</button>
+          <button className="landingpage_super_content_download">
+            Download
+          </button>
         </div>
         <div className="landingpage_super_img">
           <img className="landingpage_super_img" src="assets/super.svg" />
+        </div>
+      </div>
+      <div className="landingpage_footer">
+        <hr className="landingpage_footer_linebreak" />
+        <div className="landingpage_footer_container">
+          <div className="landingpage_footer_link-container">
+          <div className="landingpage_footer_copyright">©2020 Yourcompany</div>
+            <div className="landingpage_footer_link">
+              <a href="#about">About</a>
+            </div>
+            <div className="landingpage_footer_link">
+              <a href="#home">Home</a>
+            </div>
+            <div className="landingpage_footer_link">
+              <a href="#contact">Contact</a>
+            </div>
+            <div className="landingpage_footer_logo"><img src="assets/logo.svg"/></div>
+          </div>
         </div>
       </div>
     </div>

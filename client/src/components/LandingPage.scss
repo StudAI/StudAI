@@ -2,6 +2,7 @@
   //   background-image: url("./background-img.svg");
   //   background-size: 100vw auto;
   //   background-repeat: no-repeat;
+  overflow-x: hidden;
   height: 100vh;
   &_content {
     display: flex;
@@ -63,7 +64,7 @@
     background-repeat: no-repeat;
     text-align: center;
     height: 100vh;
-    padding:100px;
+    padding: 100px;
 
     &_content {
       width: 30vw;
@@ -81,5 +82,49 @@
     }
     &_img {
     }
+  }
+  &_footer {
+    color: #37447e;
+    background-color: #e7ecff;
+    height: 220px;
+    padding-top: 50px;
+    &_heading {
+      color: #37447e;
+      font-weight: 700;
+      font-size: 36px;
+    }
+    &_linebreak {
+      width: 1000px;
+      border-top: 1px;
+      border-color: #cdd1d4;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    &_link {
+      text-decoration: none;
+      font-size: 16px;
+      color: #111b47;
+      margin-right: 20px;
+    }
+    &_link-container {
+      text-align: left;
+      //margin-left: 100px;
+      display: flex;
+      justify-content: center;
+    }
+    &_copyright{
+        text-align: left;
+        width: 25vw;
+    }
+    &_logo {
+        text-align: right;
+        width: 25vw;
+
+    }
+    &_container{
+        display: flex;
+        justify-content: center;
+    }
+
   }
 }
