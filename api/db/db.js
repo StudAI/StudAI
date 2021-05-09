@@ -42,6 +42,17 @@ async function findUser(email) {
     console.log(err.stack);
   }
 }
+async function findUserByID(id) {
+  const values = [id];
+  console.log("2");
+  const text = "SELECT * FROM users WHERE user_id = $1";
+  try {
+    const res = await pool.query(text, values);
+    return res.rows[0];
+  } catch (err) {
+    console.log(err.stack);
+  }
+}
 
 async function updateUser(email, user) {
   const values = [...Object.values(user), email];
@@ -56,7 +67,7 @@ async function updateUser(email, user) {
     console.log(err.stack);
   }
 }
-
+exports.findUserByID = findUserByID;
 exports.createUser = createUser;
 exports.findUser = findUser;
 exports.updateUser = updateUser;

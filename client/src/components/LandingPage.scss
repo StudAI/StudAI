@@ -2,8 +2,8 @@
   //   background-image: url("./background-img.svg");
   //   background-size: 100vw auto;
   //   background-repeat: no-repeat;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   background-color: rgb(245, 235, 220);
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -94,7 +94,6 @@
       &_header {
       }
       &_text {
-
       }
       &_download {
         scroll-snap-align: center;
@@ -102,7 +101,6 @@
         color: #ffffff;
         margin-top: 6vh;
         margin-bottom: 3vh;
-
       }
     }
     &_img {
@@ -114,6 +112,7 @@
     height: 100vh;
     margin-top: 100px;
     padding-top: 50px;
+    scroll-snap-align: center;
     margin-bottom: 0px;
 
     &_heading {
@@ -138,7 +137,6 @@
       width: 25vw;
     }
     &_logo {
-
       text-align: right;
       width: 25vw;
     }
