@@ -100,12 +100,16 @@ function checkSite()
                     // This will update the tab to not go to the blocked URL.
 					if (data.time>30){
 					var i = Math.floor(Math.random() * 150) + 30
+
 					if(distractions>i){
 						blockSite();
-						distractions = 0
+						storage.set({"distractions" : 0})
+						storage.set({"time" : 0});
 					}
-					if (33<data.time<30){
-						distractions = 0
+				}
+					if (33>data.time>30){
+						storage.set({"distractions" : 0 })
+						storage.set({"time" : 0});
 					}
                     storage.set({"distractions" : Math.ceil((distractions + Math.floor(Math.random() * 1.2)))})
                         
