@@ -11,10 +11,11 @@ import Container from "@material-ui/core/Container";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import "./LandingPage.scss";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: "23vh",
+    marginTop: "20vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -62,6 +63,7 @@ export default function LoginPage() {
     setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   return (
+    <div className="loginpage">
     <Container
       component="main"
       maxWidth="xs"
@@ -130,5 +132,6 @@ export default function LoginPage() {
         </form>
       </div>
     </Container>
+    </div>
   );
 }
