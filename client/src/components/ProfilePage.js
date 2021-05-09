@@ -3,7 +3,7 @@ import { Container } from "@material-ui/core";
 import React from "react";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { Drawer } from "@material-ui/core";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router";
 
@@ -19,11 +19,13 @@ const useStyles = makeStyles((theme) => ({
 function ProfilePage() {
   const classes = useStyles();
   const history = useHistory();
+  const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.user.loggedIn);
   const name = useSelector((state) => state.user.name);
-  const handleClick = () => {
+  const handleClick = (type) => {
     if (isLoggedIn) {
       //add type to redux state
+      dispatch({ type: "match/setType", payload: type });
       history.push("/match");
     }
   };
@@ -35,9 +37,7 @@ function ProfilePage() {
         classes={{
           paper: classes.drawerRoot,
         }}
-      >
-        {/* Hello there */}
-      </Drawer>
+      ></Drawer>
       <Container
         style={{
           height: "80vh",
@@ -58,10 +58,16 @@ function ProfilePage() {
           style={{ width: 200, height: 200, color: "#37447e", opacity: 0.7 }}
         />
         <div style={isLoggedIn ? { display: "flex" } : { display: "none" }}>
-          <Button style={{ color: "#37447e" }} onClick={handleClick}>
+          <Button
+            style={{ color: "#37447e" }}
+            onClick={() => handleClick("study")}
+          >
             Find Study Partner
           </Button>
-          <Button style={{ color: "#37447e" }} onClick={handleClick}>
+          <Button
+            style={{ color: "#37447e" }}
+            onClick={() => handleClick("tutor")}
+          >
             Find Tutor
           </Button>
         </div>

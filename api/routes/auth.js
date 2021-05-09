@@ -86,7 +86,7 @@ router.put("/:email", verify, async (req, res) => {
     res.status(400).send("😢 something 😭 went 😤 wrong 😠 with 😡 request 🤬");
   }
 });
-router.get("/matches", async (req, res) => {
+router.post("/matches", async (req, res) => {
   const {
     math,
     science,
