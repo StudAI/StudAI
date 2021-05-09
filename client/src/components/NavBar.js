@@ -1,8 +1,10 @@
 import React from "react";
 import { AppBar, Toolbar, Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 function NavBar() {
   const history = useHistory();
+  const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
   return (
     <div>
       <AppBar position="absolute" color="transparent" elevation={0}>
@@ -43,21 +45,31 @@ function NavBar() {
               >
                 Stud
               </p>
-              <img src="logo192.png" alt="logo" style={{ height: 35, marginRight: "6vw"}} />
+              <img
+                src="logo192.png"
+                alt="logo"
+                style={{ height: 35, marginRight: "6vw" }}
+              />
             </div>
             <div style={{ display: "flex" }}>
-              <Button
-                style={{ width: "fit-content"}}
-                onClick={() => history.push("/login")}
-              >
-                Login
-              </Button>
-              <Button
-                style={{ width: "fit-content" }}
-                onClick={() => history.push("/signup")}
-              >
-                Signup
-              </Button>
+              {isLoggedIn ? (
+                <></>
+              ) : (
+                <>
+                  <Button
+                    style={{ width: "fit-content" }}
+                    onClick={() => history.push("/login")}
+                  >
+                    Login
+                  </Button>
+                  <Button
+                    style={{ width: "fit-content" }}
+                    onClick={() => history.push("/signup")}
+                  >
+                    Signup
+                  </Button>
+                </>
+              )}
             </div>
           </div>
         </Toolbar>
