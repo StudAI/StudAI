@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -8,6 +8,8 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import { useHistory } from "react-router";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -31,8 +33,31 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignupPage() {
+  const history = useHistory();
   const classes = useStyles();
-
+  const [userInfo, setUserInfo] = useState({
+    email: "",
+    password: "",
+    name: "",
+  });
+  const handleSignup = async () => {
+    try {
+      axios
+        .post(
+          `${process.env.REACT_APP_API_ENDPOINT}/api/users/register`,
+          userInfo
+        )
+        .then((response) => {
+          console.log(response.data);
+          history.push("/login");
+        });
+    } catch (err) {
+      alert("Login Failed");
+    }
+  };
+  const handleChange = (e) => {
+    setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
   return (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
@@ -48,6 +73,8 @@ export default function SignupPage() {
               <TextField
                 autoComplete="name"
                 name="name"
+                value={userInfo.name}
+                onChange={handleChange}
                 variant="outlined"
                 size="small"
                 required
@@ -64,6 +91,8 @@ export default function SignupPage() {
                 fullWidth
                 size="small"
                 id="email"
+                value={userInfo.email}
+                onChange={handleChange}
                 label="Email Address"
                 name="email"
                 autoComplete="email"
@@ -71,6 +100,8 @@ export default function SignupPage() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                value={userInfo.password}
+                onChange={handleChange}
                 variant="outlined"
                 required
                 fullWidth
@@ -84,11 +115,11 @@ export default function SignupPage() {
             </Grid>
           </Grid>
           <Button
-            type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={handleSignup}
           >
             Sign Up
           </Button>

@@ -132,7 +132,7 @@ function LandingPage() {
               <a href="#contact">Contact</a>
             </div>
             <div className="landingpage_footer_logo">
-              <img src="assets/logo.svg" />
+              <img alt="logo" src="assets/logo.svg" />
             </div>
           </div>
         </div>
