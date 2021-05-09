@@ -1,7 +1,8 @@
 const initialState = {
-  userID: null,
-  userName: null,
+  name: "",
+  email: "",
   loggedIn: false,
+  token: localStorage.getItem("token") || "",
 };
 
 export default function userReducer(state = initialState, action) {
@@ -9,8 +10,8 @@ export default function userReducer(state = initialState, action) {
     case "user/addUser": {
       return {
         ...state,
-        userID: action.payload.userID,
-        userName: action.payload.userName,
+        name: action.payload.name,
+        token: action.payload.token,
         loggedIn: true,
       };
     }

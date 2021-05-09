@@ -59,7 +59,17 @@ export default function SignupPage() {
     setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   return (
-    <Container component="main" maxWidth="xs">
+    <Container
+      component="main"
+      maxWidth="xs"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "90vh",
+      }}
+    >
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />

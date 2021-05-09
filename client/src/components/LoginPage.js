@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -33,12 +34,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function LoginPage() {
+  const dispatch = useDispatch();
   const classes = useStyles();
   const history = useHistory();
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
   });
+
   const handleLogin = async () => {
     try {
       const response = await axios.post(
@@ -46,7 +49,8 @@ export default function LoginPage() {
         userInfo
       );
       console.log(response.data);
-      history.push("/");
+      dispatch({ type: "user/addUser", payload: response.data });
+      history.push("/profile");
     } catch (err) {
       alert("Login Failed");
     }
@@ -55,7 +59,17 @@ export default function LoginPage() {
     setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   return (
-    <Container component="main" maxWidth="xs">
+    <Container
+      component="main"
+      maxWidth="xs"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "90vh",
+      }}
+    >
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon backgroundColor= "primary" />
