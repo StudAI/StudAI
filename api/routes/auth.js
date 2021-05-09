@@ -62,17 +62,7 @@ router.put("/:email", verify, async (req, res) => {
     if (!userExists) {
       return res.status(400).send("😐 no 😤 user 😠 found 😡");
     }
-    const usernameTaken = await db.findUser(req.body.email);
-    if (usernameTaken) {
-      return res.status(400).send("😐 username 😤 already 😠 taken 😡");
-    }
-    const salt = await bcrypt.genSalt(10);
-    const hashPassword = await bcrypt.hash(req.body.password, salt);
     const user = {
-      name: req.body.name,
-      email: req.body.email,
-      password: hashPassword,
-      isStudent: req.body.isStudent,
       math: req.body.math,
       science: req.body.science,
       english: req.body.english,
