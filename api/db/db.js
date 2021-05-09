@@ -11,7 +11,8 @@ const config = {
   port: process.env.DB_PORT,
   //For secure connection:
   ssl: {
-    ca: fs.readFileSync(process.env.DB_CERT_PATH).toString(),
+    // ca: fs.readFileSync(process.env.DB_CERT_PATH).toString(),
+    rejectUnauthorized: false,
   },
 };
 
@@ -44,10 +45,10 @@ async function findUser(email) {
 
 async function updateUser(email, user) {
   const values = [...Object.values(user), email];
-  const text = `UPDATE users SET name = $1, email = $2, password = $3, is_student = $4, math = $5, 
-    science = $6, english = $7, engineering = $8, grade_level = $9, extraversion = $10,
-    agreeableness = $11, conscientiousness = $12, neuroticism = $13, openness = $14
-    WHERE email = $15 RETURNING *`;
+  const text = `UPDATE users SET math = $1, science = $2, english = $3, 
+    engineering = $4, grade_level = $5, extraversion = $6, agreeableness = $7, 
+    conscientiousness = $8, neuroticism = $9, openness = $10
+    WHERE email = $11 RETURNING *`;
   try {
     const res = await pool.query(text, values);
     return res.rows[0];
