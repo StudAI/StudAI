@@ -95,6 +95,24 @@ function LandingPage() {
           <img className="landingpage_super_img" src="assets/super.svg" />
         </div>
       </div>
+      <div className="landingpage_footer">
+        <hr className="landingpage_footer_linebreak" />
+        <div className="landingpage_footer_container">
+          <div className="landingpage_footer_link-container">
+          <div className="landingpage_footer_copyright">©2020 Yourcompany</div>
+            <div className="landingpage_footer_link">
+              <a href="#about">About</a>
+            </div>
+            <div className="landingpage_footer_link">
+              <a href="#home">Home</a>
+            </div>
+            <div className="landingpage_footer_link">
+              <a href="#contact">Contact</a>
+            </div>
+            <div className="landingpage_footer_logo"><img src="assets/logo.svg"/></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
