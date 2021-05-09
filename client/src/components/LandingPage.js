@@ -27,7 +27,11 @@ function LandingPage() {
           </div>
         </div>
         <div className="landingpage_content_img">
-          <img className="landingpage_content_img" src="assets/studying.svg" />
+          <img
+            className="landingpage_content_img"
+            alt="imsg"
+            src="assets/studying.svg"
+          />
         </div>
       </div>
       <div className="landingpage_find">
@@ -44,16 +48,24 @@ function LandingPage() {
           </p>
         </div>
         <div className="landingpage_find_img">
-          <img className="landingpage_find_img" src="assets/screen.svg" />
+          <img
+            className="landingpage_find_img"
+            alt="imsg"
+            src="assets/screen.svg"
+          />
         </div>
       </div>
       <div className="landingpage_tutor">
         <div className="landingpage_tutor_img">
-          <img className="landingpage_tutor_img" src="assets/tutor.svg" />
+          <img
+            className="landingpage_tutor_img"
+            alt="imsg"
+            src="assets/tutor.svg"
+          />
         </div>
         <div className="landingpage_tutor_content">
           <h2 className="landingpage_tutor_content_header">
-          ML- Powered Tutoring
+            ML- Powered Tutoring
           </h2>
           <p className="landingpage_tutor_content_text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -67,7 +79,7 @@ function LandingPage() {
       <div className="landingpage_super">
         <div className="landingpage_super_content">
           <h2 className="landingpage_super_content_header">
-          Become a Super-Student
+            Become a Super-Student
           </h2>
           <p className="landingpage_super_content_text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -76,10 +88,16 @@ function LandingPage() {
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             Nulla consequat massa quis enim.
           </p>
-          <button className="landingpage_super_content_download">Download</button>
+          <button className="landingpage_super_content_download">
+            Download
+          </button>
         </div>
         <div className="landingpage_super_img">
-          <img className="landingpage_super_img" src="assets/super.svg" />
+          <img
+            className="landingpage_super_img"
+            alt="imsg"
+            src="assets/super.svg"
+          />
         </div>
       </div>
     </div>
