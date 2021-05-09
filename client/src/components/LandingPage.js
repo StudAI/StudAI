@@ -1,13 +1,18 @@
 import React from "react";
+<<<<<<< Updated upstream
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+=======
+import {Button } from "@material-ui/core";
+import { Link, useHistory } from "react-router-dom";
+>>>>>>> Stashed changes
 import "./LandingPage.scss";
 
 function LandingPage() {
   const history = useHistory();
   return (
     <div className="landingpage">
-      <div className="landingpage_content" id="home">
+      <div className="landingpage_content">
         <div className="landingpage_content_info">
           <h1 className="landingpage_content_info_header">
             Bringing Learning Into The Modern Era!
@@ -20,29 +25,29 @@ function LandingPage() {
             services and a revolutionary ML Study tracker, all to help you study
             smarter and not harder. StudAI. Give it a try!
           </p>
-          <div className="landingpage_content_info_actionarea" id="about">
+          <div className="landingpage_content_info_actionarea">
             <Button
-              variant="contained"
-              style={{
-                color: "white",
-                background: "#111B47",
-                textTransform: "capitalize",
-                marginRight: "50px",
-                marginTop: "50px",
-              }}
-              onClick={() => history.push("/signup")}
-            >
-              Sign Up
-            </Button>
-            <Button
-              variant="contained"
-              style={{
-                marginTop: "50px",
-              }}
-              onClick={() => history.push("/login")}
-            >
-              Log In
-            </Button>
+                variant="contained"
+                style={{
+                  color: "white",
+                  background: "#111B47",
+                  textTransform: "capitalize",
+                  marginRight: "50px",
+                  marginTop:"50px"
+                }}
+                onClick={() => history.push("/signup")}
+              >
+                Sign Up
+              </Button>
+              <Button
+                variant="contained"
+                style={{
+                  marginTop:"50px"
+                }}
+                onClick={() => history.push("/login")}
+              >
+                Log In
+              </Button>
           </div>
         </div>
         <div className="landingpage_content_img">
@@ -108,19 +113,17 @@ function LandingPage() {
             Nulla consequat massa quis enim.
           </p>
           <Button
-            variant="contained"
-            className="landingpage_super_content_download"
-            style={{
-              color: "white",
-              background: "#111B47",
-              textTransform: "capitalize",
-              marginTop: "6vh",
-              marginBottom: "3vh",
-            }}
-            onClick={() => history.push("/download")}
-          >
-            Download
-          </Button>
+                variant="contained"
+                className="landingpage_super_content_download"
+                style={{
+                  color: "white",
+                  background: "#111B47",
+                  textTransform: "capitalize",
+                }}
+                onClick={() => history.push("/download")}
+              >
+                Download
+              </Button>
         </div>
         <div className="landingpage_super_img">
           <img
@@ -133,14 +136,26 @@ function LandingPage() {
       <div className="landingpage_footer">
         <div className="landingpage_footer_container">
           <div className="landingpage_footer_link-container">
-            <div className="landingpage_footer_copyright">©2021 StudAI Inc</div>
-            <div className="landingpage_footer_link">About</div>
-            <div className="landingpage_footer_link">Home</div>
-            <div className="landingpage_footer_link">Contact</div>
+            <div className="landingpage_footer_copyright">
+              ©2021 StudAI Inc
+            </div>
+            <div className="landingpage_footer_link">
+              <a href="#about">About</a>
+            </div>
+            <div className="landingpage_footer_link">
+              <a href="#home">Home</a>
+            </div>
+            <div className="landingpage_footer_link">
+              <a href="#contact">Contact</a>
+            </div>
             <div className="landingpage_footer_logo">
+<<<<<<< Updated upstream
               <a href="/">
                 <img alt="logo" src="assets/logo.svg" />
               </a>
+=======
+              <img src="assets/logo.svg" />
+>>>>>>> Stashed changes
             </div>
           </div>
         </div>

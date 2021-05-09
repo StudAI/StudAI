@@ -1,7 +1,8 @@
 .download{
     background-image: url("./download-background.svg");
-    background-size: 100vw auto;
+    background-size: contain;
     background-repeat: no-repeat;
+    overflow: hidden;
     height: 120vh;
     &_item {
         text-align: center;
