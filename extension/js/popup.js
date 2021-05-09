@@ -142,8 +142,8 @@ function checkDistractions()
         
         // Change the text depending on number.
         labelDistract.innerText = distractions;        
-        if (distractions == 1) stringDistract.innerText = "distraction";
-        if (distractions !=1) stringDistract.innerText = " distractions";
+        if (distractions == 1) stringDistract.innerText = "distraction pt";
+        if (distractions !=1) stringDistract.innerText = " distraction pts";
     })
 }
 

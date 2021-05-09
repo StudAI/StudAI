@@ -13,8 +13,8 @@ setInterval(checkSite, 500);
  */
 function blockSite() 
 {
-	if (data.time>300000){
-    chrome.tabs.update({url: "../html/blockedSite.html"});}
+
+    chrome.tabs.update({url: "../html/blockedSite.html"})
 }
 
 /*
@@ -70,6 +70,9 @@ function checkSite()
 {
     chrome.storage.local.get(["state","links", "distractions", "time"], function(data) 
     {
+		function randomNum(){
+			Math.floor(Math.random() * 100) + 1
+		}
 
         // Gets the data from the local storage
         state = data.state;
@@ -95,8 +98,14 @@ function checkSite()
                     if (url.includes("options.html?add_link=" + links[index])) return;
 
                     // This will update the tab to not go to the blocked URL.
-                    // blockSite();
-                    storage.set({"distractions" : (distractions + 20)})
+					if (data.time>30){
+					var i = Math.floor(Math.random() * 150) + 30
+					if(distractions>i){
+						blockSite();
+						distractions = 0
+					}
+					}
+                    storage.set({"distractions" : Math.ceil((distractions + Math.floor(Math.random() * 1.2)))})
                         
                     return;
                 }
