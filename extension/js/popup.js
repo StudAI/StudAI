@@ -1,3 +1,4 @@
+
 // Strings for the "state change" button.
 var stringOff = "Start";
 var stringOn = "Stop";
