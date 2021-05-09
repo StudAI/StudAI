@@ -96,6 +96,9 @@ function changeTimeLabels()
 {
     storage.get(["time", "state"], function(data) 
     {
+        if(data.time>10){
+            chrome.browserAction.setIcon({path:{"16": "../assets/on.png"}});     
+        }
 	    // if not productive state, then don't change anything
         if(!data.state) return;
 
@@ -125,7 +128,7 @@ function changeTimeLabels()
 }
 
 /*
- * Function: chheckDistractions() 
+ * Function: checkDistractions() 
  * Description: The function looks into the data to determine the
  * number of distractions that has found since activating the productivity
  * state. It will change the distraction labels in the popup.
