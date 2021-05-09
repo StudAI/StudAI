@@ -13,7 +13,8 @@ setInterval(checkSite, 500);
  */
 function blockSite() 
 {
-    chrome.tabs.update({url: "../html/blockedSite.html"})
+	if (data.time>300000){
+    chrome.tabs.update({url: "../html/blockedSite.html"});}
 }
 
 /*
@@ -67,12 +68,13 @@ function setTime()
  */
 function checkSite() 
 {
-    chrome.storage.local.get(["state","links", "distractions"], function(data) 
+    chrome.storage.local.get(["state","links", "distractions", "time"], function(data) 
     {
 
         // Gets the data from the local storage
         state = data.state;
         links = data.links;
+		time = data.time;
         distractions = data.distractions;
         // If not active productive session, then continue as normal.
         if(!state) return;
@@ -93,8 +95,8 @@ function checkSite()
                     if (url.includes("options.html?add_link=" + links[index])) return;
 
                     // This will update the tab to not go to the blocked URL.
-                    blockSite();
-                    storage.set({"distractions" : (distractions + 1)})
+                    // blockSite();
+                    storage.set({"distractions" : (distractions + 20)})
                         
                     return;
                 }

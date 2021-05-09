@@ -96,7 +96,7 @@ function changeTimeLabels()
 {
     storage.get(["time", "state"], function(data) 
     {
-        if(data.time>10){
+        if(data.time>30){
             chrome.browserAction.setIcon({path:{"16": "../assets/on.png"}});     
         }
 	    // if not productive state, then don't change anything

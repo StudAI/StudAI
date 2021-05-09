@@ -1,13 +1,10 @@
 h1{
-    text-align: center;
     display:blue;
     font-size:40px;
     padding: 5px;
     text-decoration: underline;
-    text-decoration-style: dotted;
 }
 h2 {
-    text-align: center;
     font-size: 25px;
 }
 ul {
@@ -15,12 +12,14 @@ ul {
     padding-left: 0;
 }
 p {
-    text-align: center;
     font-size: 15px;
 }
 HTML {
     text-align: center;
     background-color: rgb(245, 235, 220);
     font-size:20px;
+    text-align: center;
+    color: #091133;
+    background-image: url("../../client/src/components/background.svg");
 }
 
