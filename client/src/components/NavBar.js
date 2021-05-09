@@ -38,12 +38,12 @@ function NavBar() {
                   fontWeight: 900,
                   fontSize: 32,
                   margin: 0,
-                  color: "#37447E",
+                  color: "#111B47",
                 }}
               >
                 Stud
               </p>
-              <img src="logo192.png" alt="logo" style={{ height: 35, marginRight: "7vw"}} />
+              <img src="logo192.png" alt="logo" style={{ height: 35, marginRight: "6vw"}} />
             </div>
             <div style={{ display: "flex" }}>
               <Button
