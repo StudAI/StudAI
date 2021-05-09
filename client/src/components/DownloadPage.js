@@ -18,17 +18,26 @@ function DownloadPage() {
             variant="contained"
             className="landingpage_super_content_download"
             style={{
-              color: "white",
+              color: "black",
               background: "#111B47",
               textTransform: "capitalize",
               marginLeft: "7vw",
               marginRight: "9vw",
-              width:"175px"
+              width:"175px",
             }}
-            onClick={() => history.push("/download")}
+
           >
-            Download
+            <a             style={{
+              color: "white",
+              textDecoration: "none"
+            }}
+                href="../../../extension.zip"
+                download
+              >
+                Download
+              </a>
           </Button>
+
       <Button
             variant="contained"
             className="landingpage_super_content_download"
