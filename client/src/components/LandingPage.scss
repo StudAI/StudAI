@@ -97,7 +97,6 @@
         color: #ffffff;
         margin-top: 8vh;
         margin-bottom: 5vh;
-
       }
     }
     &_img {
@@ -108,6 +107,8 @@
     background-color: #e7ecff;
     height: 220px;
     padding-top: 50px;
+    scroll-snap-align: center;
+
     &_heading {
       color: #37447e;
       font-weight: 700;

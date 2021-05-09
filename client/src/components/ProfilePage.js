@@ -20,7 +20,7 @@ function ProfilePage() {
   const name = useSelector((state) => state.user.name);
 
   return (
-    <div style={{ marginTop: 50 }}>
+    <div style={{ marginTop: 100 }}>
       <Drawer
         variant="permanent"
         anchor="left"
@@ -28,11 +28,10 @@ function ProfilePage() {
           paper: classes.drawerRoot,
         }}
       >
-        Hello there
+        {/* Hello there */}
       </Drawer>
       <Container
         style={{
-          height: "100vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
