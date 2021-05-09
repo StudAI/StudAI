@@ -58,6 +58,7 @@ function clickState()
             newState = true;
             resetTimeLabels();
             buttonState.innerText = stringOn;
+            chrome.browserAction.setIcon({path:{"16": "../assets/loading.png"}});     
         }
         else 
         {
@@ -65,6 +66,7 @@ function clickState()
             buttonState.innerText = stringOff;
             storage.set({"time" : 0});
             storage.set({"distractions": 0});
+            chrome.browserAction.setIcon({path:{"16": "../assets/off.png"}});   
             checkDistractions();
         }
 
@@ -101,6 +103,8 @@ function changeTimeLabels()
         var seconds = parseInt(data.time%60);   
         var minutes = parseInt((data.time/60)%60);
         var hours = parseInt(data.time/3600);
+
+
 	
 	// write out the numbers onto the popup.
         if(seconds<10) 

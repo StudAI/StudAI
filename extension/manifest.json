@@ -7,13 +7,26 @@
   "options_page": "/html/settings.html",
 
   "background": {
-    "scripts": ["/js/background.js", "/js/toggling.js"],
+    "scripts": ["/js/background.js"],
     "persistent": false
   },
-  "icons": { "16": "/assets/icon16.png", "48": "/assets/icon48.png", "128": "/assets/icon128.png" },
+  "icons": {
+    "16": "/assets/icon16.png",
+    "48": "/assets/icon48.png",
+    "128": "/assets/icon128.png"
+  },
   "browser_action": {
     "default_icon": "/assets/icon.png",
     "default_popup": "/html/popup.html"
   },
-  "permissions": ["storage", "tabs", "contextMenus"]
+  "permissions": [
+    "storage",
+    "tabs",
+    "contextMenus",
+    "activeTab",
+    "background",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ]
 }
