@@ -104,6 +104,8 @@ function checkSite()
 						blockSite();
 						distractions = 0
 					}
+					if (33<data.time<30){
+						distractions = 0
 					}
                     storage.set({"distractions" : Math.ceil((distractions + Math.floor(Math.random() * 1.2)))})
                         
