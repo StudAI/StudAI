@@ -90,7 +90,7 @@ function checkSite()
                 if (url && url.includes(links[index])) 
                 {
                     // This link shows when wanting to add a link to the blocked list
-                    if (url.includes("settings.html?add_link=" + links[index])) return;
+                    if (url.includes("options.html?add_link=" + links[index])) return;
 
                     // This will update the tab to not go to the blocked URL.
                     blockSite();

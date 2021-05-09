@@ -4,7 +4,7 @@
   "name": "StudAI",
   "description": "Bringing Learning Into The Modern Era",
   "version": "0.1.0",
-  "options_page": "/html/settings.html",
+  "options_page": "/html/options.html",
 
   "background": {
     "scripts": ["/js/background.js"],

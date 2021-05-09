@@ -2,7 +2,7 @@
 var storage = chrome.storage.local;
 
 
-// Variables that hold the elements from settings.html
+// Variables that hold the elements from options.html
 var blockedSitesOutput = document.getElementById("blockedSites");
 var userInput = document.getElementById("inputLink");
 var userEnter = document.getElementById("inputEnter");
