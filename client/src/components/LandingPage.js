@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./LandingPage.scss";
 
 function LandingPage() {
+  const history = useHistory();
   return (
     <div className="landingpage">
       <div className="landingpage_content">
@@ -38,7 +39,11 @@ function LandingPage() {
           </div>
         </div>
         <div className="landingpage_content_img">
-          <img className="landingpage_content_img" src="assets/studying.svg" />
+          <img
+            className="landingpage_content_img"
+            alt="imsg"
+            src="assets/studying.svg"
+          />
         </div>
       </div>
       <div className="landingpage_find">
@@ -55,12 +60,20 @@ function LandingPage() {
           </p>
         </div>
         <div className="landingpage_find_img">
-          <img className="landingpage_find_img" src="assets/screen.svg" />
+          <img
+            className="landingpage_find_img"
+            alt="imsg"
+            src="assets/screen.svg"
+          />
         </div>
       </div>
       <div className="landingpage_tutor">
         <div className="landingpage_tutor_img">
-          <img className="landingpage_tutor_img" src="assets/tutor.svg" />
+          <img
+            className="landingpage_tutor_img"
+            alt="imsg"
+            src="assets/tutor.svg"
+          />
         </div>
         <div className="landingpage_tutor_content">
           <h2 className="landingpage_tutor_content_header">
@@ -87,19 +100,28 @@ function LandingPage() {
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             Nulla consequat massa quis enim.
           </p>
-          <button className="landingpage_super_content_download">
+          <button
+            className="landingpage_super_content_download"
+            onClick={() => history.push("/download")}
+          >
             Download
           </button>
         </div>
         <div className="landingpage_super_img">
-          <img className="landingpage_super_img" src="assets/super.svg" />
+          <img
+            className="landingpage_super_img"
+            alt="imsg"
+            src="assets/super.svg"
+          />
         </div>
       </div>
       <div className="landingpage_footer">
         <hr className="landingpage_footer_linebreak" />
         <div className="landingpage_footer_container">
           <div className="landingpage_footer_link-container">
-          <div className="landingpage_footer_copyright">©2020 Yourcompany</div>
+            <div className="landingpage_footer_copyright">
+              ©2020 Yourcompany
+            </div>
             <div className="landingpage_footer_link">
               <a href="#about">About</a>
             </div>
@@ -109,7 +131,9 @@ function LandingPage() {
             <div className="landingpage_footer_link">
               <a href="#contact">Contact</a>
             </div>
-            <div className="landingpage_footer_logo"><img src="assets/logo.svg"/></div>
+            <div className="landingpage_footer_logo">
+              <img src="assets/logo.svg" />
+            </div>
           </div>
         </div>
       </div>
