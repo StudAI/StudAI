@@ -3,6 +3,8 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const db = require("../db/db");
 const verify = require("./verify");
+const axios = require("axios");
+const { response } = require("express");
 
 router.post("/register", async (req, res) => {
   try {
@@ -84,5 +86,47 @@ router.put("/:email", verify, async (req, res) => {
     res.status(400).send("😢 something 😭 went 😤 wrong 😠 with 😡 request 🤬");
   }
 });
+router.get("/matches", async (req, res) => {
+  const {
+    math,
+    science,
+    english,
+    engineering,
+    grade_level,
+    extraversion,
+    agreeableness,
+    conscientiousness,
+    neuroticism,
+    openness,
+    numberOfMatches,
+  } = req.body;
+  axios
+    .post(" https://damp-beach-31873.herokuapp.com/matches", {
+      math,
+      science,
+      english,
+      engineering,
+      grade_level,
+      extraversion,
+      agreeableness,
+      conscientiousness,
+      neuroticism,
+      openness,
+      numberOfMatches,
+    })
+    .then((response) => {
+      res.json(response.data).status(200);
+    })
+    .catch((err) => response.status(400));
+});
 
+router.get("/:id", async (req, res) => {
+  console.log(req.params.id);
+  try {
+    let user = await db.findUserByID(req.params.id);
+    res.json(user).status(200);
+  } catch (err) {
+    res.status(400);
+  }
+});
 module.exports = router;
