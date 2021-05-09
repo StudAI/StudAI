@@ -14,6 +14,7 @@
     position: relative;
     left: 10vw;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     &_info {
       &_header {
         line-height: 66px;
@@ -55,6 +56,7 @@
     }
     &_img {
       scroll-snap-align: center;
+      scroll-snap-stop: always;
       padding: 2vw 0vh 0vh;
       width: 40vw;
     }
@@ -64,6 +66,7 @@
     background-size: 100vw auto;
     background-repeat: no-repeat;
     scroll-snap-align: center;
+    scroll-snap-stop: always;
     display: flex;
     align-items: center;
     padding: 0vh 10vw 5vh;
@@ -84,13 +87,14 @@
     padding: 100px;
 
     &_content {
-      width: 30vw;
+      width: 40vw;
       margin: auto;
 
       &_header {
       }
       &_text {
         scroll-snap-align: center;
+        scroll-snap-stop: always;
       }
       &_download {
         background-color: #111b47;
@@ -105,9 +109,11 @@
   }
   &_footer {
     color: #37447e;
-    background-color: #e7ecff;
-    height: 220px;
-    padding-top: 50px;
+    background-color: #cbc3b7;
+    height: 100vh;
+    padding-top: 100px;
+    margin-top: 200px;
+
     &_heading {
       color: #37447e;
       font-weight: 700;
@@ -119,6 +125,7 @@
       border-color: #cdd1d4;
       margin-top: 30px;
       margin-bottom: 30px;
+      padding-bottom: 10px;
     }
     &_link {
       text-decoration: none;
@@ -137,11 +144,14 @@
       width: 25vw;
     }
     &_logo {
+
       text-align: right;
       width: 25vw;
     }
     &_container {
       display: flex;
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
       justify-content: center;
     }
   }
