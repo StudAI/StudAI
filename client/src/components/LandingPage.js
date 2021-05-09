@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LandingPage.scss";
 
 function LandingPage() {
@@ -19,10 +20,20 @@ function LandingPage() {
           </p>
           <div className="landingpage_content_info_actionarea">
             <button className="landingpage_content_info_actionarea_signup">
-              Sign Up
+              <Link
+                to="/signup"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                Sign Up
+              </Link>
             </button>
             <button className="landingpage_content_info_actionarea_login">
-              Log In
+              <Link
+                to="/login"
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                Log In
+              </Link>
             </button>
           </div>
         </div>
@@ -53,7 +64,7 @@ function LandingPage() {
         </div>
         <div className="landingpage_tutor_content">
           <h2 className="landingpage_tutor_content_header">
-          ML- Powered Tutoring
+            ML- Powered Tutoring
           </h2>
           <p className="landingpage_tutor_content_text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -67,7 +78,7 @@ function LandingPage() {
       <div className="landingpage_super">
         <div className="landingpage_super_content">
           <h2 className="landingpage_super_content_header">
-          Become a Super-Student
+            Become a Super-Student
           </h2>
           <p className="landingpage_super_content_text">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -76,7 +87,9 @@ function LandingPage() {
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             Nulla consequat massa quis enim.
           </p>
-          <button className="landingpage_super_content_download">Download</button>
+          <button className="landingpage_super_content_download">
+            Download
+          </button>
         </div>
         <div className="landingpage_super_img">
           <img className="landingpage_super_img" src="assets/super.svg" />
