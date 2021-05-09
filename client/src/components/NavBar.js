@@ -43,11 +43,11 @@ function NavBar() {
               >
                 Stud
               </p>
-              <img src="logo192.png" alt="logo" style={{ height: 35 }} />
+              <img src="logo192.png" alt="logo" style={{ height: 35, marginRight: "7vw"}} />
             </div>
             <div style={{ display: "flex" }}>
               <Button
-                style={{ width: "fit-content" }}
+                style={{ width: "fit-content"}}
                 onClick={() => history.push("/login")}
               >
                 Login
