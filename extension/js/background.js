@@ -1,15 +1,3 @@
-/*
- * File: background.js
- * Created by Kevin Thai
- * Date: September 30, 2020
- *
- * This file will do all the background processes needed for the extension.
- * It contains a listener to check the URL of the sites that the user is
- * requesting to look into. If the URL includes a site that is supposed to be
- * blocked, the file would set the tab to the HTML page that says that it is
- * blocked. The user can go back to their initial page if the user went to the
- * URL page.
- */
 
 var storage = chrome.storage.local; // the storage where data is saved.
 var state, links, time, totalSeconds; // local vars that hold storage values
