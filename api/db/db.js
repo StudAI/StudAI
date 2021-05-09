@@ -11,7 +11,8 @@ const config = {
   port: process.env.DB_PORT,
   //For secure connection:
   ssl: {
-    ca: fs.readFileSync(process.env.DB_CERT_PATH).toString(),
+    // ca: fs.readFileSync(process.env.DB_CERT_PATH).toString(),
+    rejectUnauthorized: false,
   },
 };
 
