@@ -151,3 +151,19 @@
 .landingpage::-webkit-scrollbar {
   display: none;
 }
+
+.loginpage {
+  background: url("./background2.svg") no-repeat center center fixed; ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.signuppage {
+  background: url("./background2.svg") no-repeat center center fixed; ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

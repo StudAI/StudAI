@@ -10,10 +10,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { useHistory } from "react-router";
 import axios from "axios";
+import "./LandingPage.scss";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: "20vh",
+    marginTop: "17vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -59,6 +60,7 @@ export default function SignupPage() {
     setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   return (
+    <div className="signuppage">
     <Container
       component="main"
       maxWidth="xs"
@@ -146,5 +148,6 @@ export default function SignupPage() {
         </form>
       </div>
     </Container>
+    </div>
   );
 }
