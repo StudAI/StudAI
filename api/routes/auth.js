@@ -49,7 +49,10 @@ router.post("/login", async (req, res) => {
       return res.status(400).send("🤡 invalid 💩 password 💀");
     }
     const token = jwt.sign({ id: user.id }, process.env.TOKEN_SECRET);
-    res.header("auth-token", token).send(token).status(200);
+    res
+      .header("auth-token", token)
+      .json({ token, name: user.name, email: user.email })
+      .status(200);
   } catch (error) {
     console.log(error);
     res.status(400).send("😢 something 😭 went 😤 wrong 😠 with 😡 request 🤬");
