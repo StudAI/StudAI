@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./LandingPage.scss";
 
 function LandingPage() {
+  const history = useHistory();
   return (
     <div className="landingpage">
       <div className="landingpage_content">
@@ -99,7 +100,10 @@ function LandingPage() {
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             Nulla consequat massa quis enim.
           </p>
-          <button className="landingpage_super_content_download">
+          <button
+            className="landingpage_super_content_download"
+            onClick={() => history.push("/download")}
+          >
             Download
           </button>
         </div>
