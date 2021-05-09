@@ -1,0 +1,14 @@
+.download{
+    background-image: url("./download-background.svg");
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    height: 120vh;
+    &_item {
+        text-align: center;
+    }
+    &_button {
+        background-color: #111b47;
+        color: #ffffff;
+    }
+
+}
