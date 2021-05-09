@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./LandingPage.scss";
 
 function LandingPage() {
@@ -139,7 +139,7 @@ function LandingPage() {
             <div className="landingpage_footer_link">Contact</div>
             <div className="landingpage_footer_logo">
               <a href="/">
-                <img src="assets/logo.svg" />
+                <img alt="logo" src="assets/logo.svg" />
               </a>
             </div>
           </div>
