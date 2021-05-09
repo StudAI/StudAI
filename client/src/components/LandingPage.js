@@ -116,7 +116,6 @@ function LandingPage() {
         </div>
       </div>
       <div className="landingpage_footer">
-        <hr className="landingpage_footer_linebreak" />
         <div className="landingpage_footer_container">
           <div className="landingpage_footer_link-container">
             <div className="landingpage_footer_copyright">
