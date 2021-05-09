@@ -2,10 +2,12 @@
   //   background-image: url("./background-img.svg");
   //   background-size: 100vw auto;
   //   background-repeat: no-repeat;
-  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   background-color: rgb(245, 235, 220);
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  scroll-padding-top: 15vh;
   height: 100vh;
   overflow-x: hidden;
   &_content {
@@ -14,6 +16,7 @@
     position: relative;
     left: 10vw;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     &_info {
       &_header {
         line-height: 66px;
@@ -43,7 +46,7 @@
   }
   &_find {
     background-image: url("./background1.svg");
-    background-size: 110vw auto;
+    background-size: 100vw auto;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -55,6 +58,7 @@
     }
     &_img {
       scroll-snap-align: center;
+      scroll-snap-stop: always;
       padding: 2vw 0vh 0vh;
       width: 40vw;
     }
@@ -64,6 +68,7 @@
     background-size: 100vw auto;
     background-repeat: no-repeat;
     scroll-snap-align: center;
+    scroll-snap-stop: always;
     display: flex;
     align-items: center;
     padding: 0vh 10vw 5vh;
@@ -81,22 +86,21 @@
     background-repeat: no-repeat;
     text-align: center;
     height: 100vh;
-    padding: 100px;
 
     &_content {
-      width: 30vw;
+      width: 40vw;
       margin: auto;
 
       &_header {
       }
       &_text {
-        scroll-snap-align: center;
       }
       &_download {
-        background-color: #111b47;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
         color: #ffffff;
-        margin-top: 8vh;
-        margin-bottom: 5vh;
+        margin-top: 6vh;
+        margin-bottom: 3vh;
       }
     }
     &_img {
@@ -104,22 +108,17 @@
   }
   &_footer {
     color: #37447e;
-    background-color: #e7ecff;
-    height: 220px;
+    background-color: #cbc3b7;
+    height: 100vh;
+    margin-top: 100px;
     padding-top: 50px;
     scroll-snap-align: center;
+    margin-bottom: 0px;
 
     &_heading {
       color: #37447e;
       font-weight: 700;
       font-size: 36px;
-    }
-    &_linebreak {
-      width: 1000px;
-      border-top: 1px;
-      border-color: #cdd1d4;
-      margin-top: 30px;
-      margin-bottom: 30px;
     }
     &_link {
       text-decoration: none;
@@ -146,4 +145,7 @@
       justify-content: center;
     }
   }
+}
+.landingpage::-webkit-scrollbar {
+  display: none;
 }

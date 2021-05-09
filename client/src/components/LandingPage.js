@@ -1,4 +1,5 @@
 import React from "react";
+import {Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import "./LandingPage.scss";
 
@@ -20,22 +21,28 @@ function LandingPage() {
             smarter and not harder. StudAI. Give it a try!
           </p>
           <div className="landingpage_content_info_actionarea">
-            <button className="landingpage_content_info_actionarea_signup">
-              <Link
-                to="/signup"
-                style={{ color: "inherit", textDecoration: "inherit" }}
+            <Button
+                variant="contained"
+                style={{
+                  color: "white",
+                  background: "#111B47",
+                  textTransform: "capitalize",
+                  marginRight: "50px",
+                  marginTop:"50px"
+                }}
+                onClick={() => history.push("/signup")}
               >
                 Sign Up
-              </Link>
-            </button>
-            <button className="landingpage_content_info_actionarea_login">
-              <Link
-                to="/login"
-                style={{ color: "inherit", textDecoration: "inherit" }}
+              </Button>
+              <Button
+                variant="contained"
+                style={{
+                  marginTop:"50px"
+                }}
+                onClick={() => history.push("/login")}
               >
                 Log In
-              </Link>
-            </button>
+              </Button>
           </div>
         </div>
         <div className="landingpage_content_img">
@@ -100,12 +107,20 @@ function LandingPage() {
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             Nulla consequat massa quis enim.
           </p>
-          <button
-            className="landingpage_super_content_download"
-            onClick={() => history.push("/download")}
-          >
-            Download
-          </button>
+          <Button
+                variant="contained"
+                className="landingpage_super_content_download"
+                style={{
+                  color: "white",
+                  background: "#111B47",
+                  textTransform: "capitalize",
+                  marginTop: "6vh",
+                  marginBottom: "3vh"
+                }}
+                onClick={() => history.push("/download")}
+              >
+                Download
+              </Button>
         </div>
         <div className="landingpage_super_img">
           <img
@@ -116,7 +131,6 @@ function LandingPage() {
         </div>
       </div>
       <div className="landingpage_footer">
-        <hr className="landingpage_footer_linebreak" />
         <div className="landingpage_footer_container">
           <div className="landingpage_footer_link-container">
             <div className="landingpage_footer_copyright">
@@ -132,7 +146,7 @@ function LandingPage() {
               <a href="#contact">Contact</a>
             </div>
             <div className="landingpage_footer_logo">
-              <img alt="logo" src="assets/logo.svg" />
+              <img src="assets/logo.svg" />
             </div>
           </div>
         </div>
