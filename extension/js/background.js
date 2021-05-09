@@ -175,10 +175,10 @@ chrome.contextMenus.create({
 chrome.contextMenus.onClicked.addListener(function contextMenuHandler(info, tab) {
 		switch(info.menuItemId) {
 			case "baFilterListMenu":
-				chrome.tabs.create({ url: '/filterList.html'});
+				chrome.tabs.create({ url: '../html//filterList.html'});
 				break;
 			case "baTimerMode":
-				chrome.tabs.create({ url: '/timerModeSetup.html'});
+				chrome.tabs.create({ url: '../html//timerModeSetup.html'});
 				break;
 			case "baAddSiteToFilterList":
 			case "pgAddSiteToFilterList":
