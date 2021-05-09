@@ -36,12 +36,12 @@ function addDefaultFilters(){
 chrome.runtime.onStartup.addListener(function() {
 	chrome.storage.sync.get('isEnabled', function (data) {
 		if(data.isEnabled){
-			icon = 'on.png';
+			icon = '/assets/on.png';
 		}
 		else if(!data.isEnabled){
-			icon = 'off.png';
+			icon = '/assets/off.png';
 		}else{
-			icon = 'icon.png';
+			icon = '/assets/icon.png';
 		}
 		chrome.browserAction.setIcon({path:{"16": icon}});
 	});
@@ -175,10 +175,10 @@ chrome.contextMenus.create({
 chrome.contextMenus.onClicked.addListener(function contextMenuHandler(info, tab) {
 		switch(info.menuItemId) {
 			case "baFilterListMenu":
-				chrome.tabs.create({ url: '/filterList.html'});
+				chrome.tabs.create({ url: '../html//filterList.html'});
 				break;
 			case "baTimerMode":
-				chrome.tabs.create({ url: '/timerModeSetup.html'});
+				chrome.tabs.create({ url: '../html//timerModeSetup.html'});
 				break;
 			case "baAddSiteToFilterList":
 			case "pgAddSiteToFilterList":
